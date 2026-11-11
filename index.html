@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PakPorter: Your Wish. Their Journey. Delivered.</title>
+<meta name="description" content="PakPorter connects Buyers in Pakistan with verified Travellers who carry authentic products from abroad, with payment held in escrow until delivery.">
+<meta name="theme-color" content="#070d24">
+<meta property="og:title" content="PakPorter: Your Wish. Their Journey. Delivered.">
+<meta property="og:description" content="Authentic products from abroad, carried by verified Travellers, with payment held in escrow until delivery.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cmask id='m'%3E%3Crect width='48' height='48' fill='white'/%3E%3Ccircle cx='31' cy='18' r='15'/%3E%3C/mask%3E%3Crect width='48' height='48' rx='11' fill='%23070d24'/%3E%3Ccircle cx='23' cy='25' r='15' fill='%2300c6ff' mask='url(%23m)'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --night: #070d24;
+    --deep: #0f1f52;
+    --blue: #0061ff;
+    --cyan: #00c6ff;
+    --bg: #f3f6fc;
+    --panel: #ffffff;
+    --ink: #0a1230;
+    --muted: #45516b;
+    --link: #0052d9;
+    --line: #c9d4ea;
+    --sans: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1331;
+      --panel: #111b40;
+      --ink: #eef3ff;
+      --muted: #b4c3e6;
+      --link: #6aa8ff;
+      --line: #2a3866;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  a { color: var(--link); }
+  :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background: linear-gradient(180deg, var(--night) 0%, var(--deep) 100%);
+    color: #fff;
+    padding: calc(24px + env(safe-area-inset-top, 0)) 24px 0;
+    overflow: hidden;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; }
+  .brand svg { width: 40px; height: 40px; flex: none; }
+  h1 {
+    font-size: clamp(42px, 11vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+    margin: 44px 0 20px;
+  }
+  h1 span { display: block; }
+  .lede { font-size: 19px; line-height: 1.5; color: #cfe0ff; max-width: 34ch; margin: 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: #04122e;
+  }
+  .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px #5d7bd1; }
+  .route { display: block; width: 100%; height: auto; margin-top: 20px; }
+  .route text { font-family: var(--sans); font-size: 13px; font-weight: 700; fill: #cfe0ff; }
+
+  /* ---------- sections ---------- */
+  section { padding: 56px 24px 0; }
+  section:last-of-type { padding-bottom: 56px; }
+  h2 { font-size: 28px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 16px; font-weight: 800; }
+  p { margin: 0 0 16px; max-width: 62ch; }
+  .muted { color: var(--muted); }
+
+  /* steps: a route with four stops */
+  .steps { list-style: none; margin: 28px 0 0; padding: 0; position: relative; }
+  .steps::before {
+    content: "";
+    position: absolute;
+    left: 19px; top: 20px; bottom: 20px;
+    border-left: 3px dotted var(--blue);
+  }
+  .steps li { position: relative; padding: 0 0 28px 64px; }
+  .steps li:last-child { padding-bottom: 0; }
+  .stop {
+    position: absolute; left: 0; top: -2px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: #04122e; font-weight: 800; font-size: 17px;
+    display: grid; place-items: center;
+    box-shadow: 0 0 0 6px var(--bg);
+  }
+  .steps h3 { margin: 0 0 4px; font-size: 19px; line-height: 1.3; }
+  .steps p { margin: 0; color: var(--muted); }
+
+  /* trust list */
+  .trust { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0; }
+  .trust li { display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid var(--line); }
+  .trust li:last-child { border-bottom: 1px solid var(--line); }
+  .trust svg { width: 28px; height: 28px; flex: none; margin-top: 2px; stroke: var(--link); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .trust strong { display: block; font-size: 17px; }
+  .trust span { color: var(--muted); font-size: 16px; }
+  @media (min-width: 640px) {
+    .trust { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+    .trust li:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+  }
+
+  /* status */
+  .status { background: var(--panel); border-radius: 16px; padding: 24px; border: 1px solid var(--line); }
+  .status h2 { font-size: 22px; }
+  .status ul { margin: 0; padding-left: 20px; }
+  .status li { margin-bottom: 8px; }
+  .status li:last-child { margin-bottom: 0; }
+
+  /* team */
+  .team p { margin-bottom: 6px; }
+  .team .names { font-size: 20px; font-weight: 800; }
+  #contact { margin-top: 14px; }
+  #contact p { margin: 0 0 4px; }
+
+  footer { border-top: 1px solid var(--line); margin: 56px 24px 0; padding: 20px 0 40px; font-size: 14px; color: var(--muted); }
+  footer .wrap { max-width: 720px; }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <!-- Stand-in mark. Replace this whole <svg> with the final logo SVG when it is ready. -->
+      <svg viewBox="0 0 48 48" role="img" aria-label="PakPorter logo">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0061ff"/><stop offset="1" stop-color="#00c6ff"/>
+          </linearGradient>
+          <mask id="cut"><rect width="48" height="48" fill="#fff"/><circle cx="31" cy="18" r="15"/></mask>
+        </defs>
+        <circle cx="23" cy="25" r="17" fill="url(#g)" mask="url(#cut)"/>
+        <circle cx="31" cy="31" r="1.8" fill="#cfe0ff"/>
+        <circle cx="36" cy="26" r="1.8" fill="#cfe0ff"/>
+        <polygon points="45,16 37,12 39,16 37,20" fill="#fff"/>
+      </svg>
+      <span>PakPorter</span>
+    </div>
+
+    <h1><span>Your wish.</span><span>Their journey.</span><span>Delivered.</span></h1>
+    <p class="lede">Authentic products from abroad, carried home by verified Travellers, with your payment protected until delivery.</p>
+
+    <div class="actions">
+      <a class="btn" id="demoBtn" href="#" hidden>Try the live demo</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+
+    <svg class="route" viewBox="0 0 360 150" role="img" aria-label="A Traveller's flight carries a parcel from abroad to Pakistan">
+      <path id="flightPath" d="M24 112 C 100 6, 262 6, 336 102" fill="none" stroke="#00c6ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <circle cx="24" cy="112" r="7" fill="#fff"/>
+      <circle cx="336" cy="102" r="7" fill="#00c6ff"/>
+      <text x="24" y="140" text-anchor="start">Abroad</text>
+      <text x="336" y="140" text-anchor="end">Pakistan</text>
+      <g id="plane">
+        <polygon points="12,0 -9,-7 -4,0 -9,7" fill="#fff"/>
+        <animateMotion id="fly" dur="4.5s" begin="0s" fill="freeze" rotate="auto" calcMode="spline" keyTimes="0;1" keySplines="0.3 0 0.2 1">
+          <mpath href="#flightPath"/>
+        </animateMotion>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Why it exists</h2>
+      <p>Genuine international products are hard to find in Pakistan, and when they are available they are often resold at a large markup.</p>
+      <p>People fall back on relatives or social media groups, which offer no identity checks, no secure payment and no way to settle a dispute. Buyers overpay or get scammed, and Travellers can end up carrying items they should not.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="stop" aria-hidden="true">1</span>
+          <h3>Make a wish</h3>
+          <p>A Buyer posts the product they want from abroad, with photos, quantity and a deadline.</p>
+        </li>
+        <li>
+          <span class="stop" aria-hidden="true">2</span>
+          <h3>Travellers bid</h3>
+          <p>Verified Travellers flying a matching route offer to carry it for a fee. Each Traveller places one bid.</p>
+        </li>
+        <li>
+          <span class="stop" aria-hidden="true">3</span>
+          <h3>Payment is held in escrow</h3>
+          <p>The Buyer picks a bid and the payment is held in PakPorter Points until the product arrives.</p>
+        </li>
+        <li>
+          <span class="stop" aria-hidden="true">4</span>
+          <h3>Delivered and released</h3>
+          <p>The Buyer confirms with a handover code and the payment is released to the Traveller.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Built for trust</h2>
+      <ul class="trust">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          <div><strong>Route-matched Travellers</strong><span>Buyers only see offers from people flying their route.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+          <div><strong>Escrow-protected payments</strong><span>Money moves only after delivery is confirmed.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg>
+          <div><strong>Verified identity and trips</strong><span>Travellers confirm who they are and where they are flying.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+          <div><strong>Safety screening</strong><span>Wishes for banned and restricted items are held for review.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+          <div><strong>Price guidance</strong><span>A suggested range helps both sides agree a fair fee.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>
+          <div><strong>Trust scores and disputes</strong><span>Ratings build reputation, and an admin resolves disagreements.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="status">
+        <h2>Where PakPorter stands</h2>
+        <ul>
+          <li>An interactive prototype with simulated data shows the full Buyer and Traveller journey.</li>
+          <li>The complete platform is under development as a final year project.</li>
+          <li>AI-supported features, such as safety screening and price guidance, appear in the prototype as demonstrations.</li>
+          <li>The planned revenue model is a tiered commission on completed deliveries. There are no live users or revenue yet, and we welcome feedback and partnerships.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap">
+      <h2>The team</h2>
+      <p class="names">Saif Ullah and Bilal</p>
+      <p class="muted">Supervisor: Dr. Faisal Shafique Butt</p>
+      <p class="muted">BS Software Engineering final year project, COMSATS University Islamabad, Wah Campus</p>
+      <div id="contact" hidden>
+        <p id="contactEmail" hidden>Email: <a href="#"></a></p>
+        <p id="contactPhone" hidden>Phone: <a href="#"></a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">PakPorter is a prototype project. Screens, prices and users shown in the demo are simulated.</div>
+</footer>
+
+<script>
+  // ---- Edit these three values before deploying. Empty values are hidden automatically. ----
+  var CONFIG = {
+    demoUrl: "",   // e.g. "https://pakporter-expo.netlify.app/demo" (the live prototype). Leave empty to hide the button.
+    email:   "",   // e.g. "name@example.com"
+    phone:   ""    // e.g. "+92 300 0000000"
+  };
+
+  (function () {
+    var btn = document.getElementById("demoBtn");
+    if (CONFIG.demoUrl) { btn.href = CONFIG.demoUrl; btn.hidden = false; }
+
+    var box = document.getElementById("contact");
+    if (CONFIG.email) {
+      var e = document.getElementById("contactEmail");
+      var ea = e.querySelector("a");
+      ea.href = "mailto:" + CONFIG.email; ea.textContent = CONFIG.email;
+      e.hidden = false; box.hidden = false;
+    }
+    if (CONFIG.phone) {
+      var p = document.getElementById("contactPhone");
+      var pa = p.querySelector("a");
+      pa.href = "tel:" + CONFIG.phone.replace(/[^+\d]/g, ""); pa.textContent = CONFIG.phone;
+      p.hidden = false; box.hidden = false;
+    }
+
+    // Respect reduced motion: skip the flight animation and park the plane at the destination.
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      var fly = document.getElementById("fly");
+      if (fly) fly.parentNode.removeChild(fly);
+      document.getElementById("plane").setAttribute("transform", "translate(336 102) rotate(35)");
+    }
+  })();
+</script>
+</body>
+</html>
